@@ -1,5 +1,13 @@
 package com.betrybe.sistemadevotacao;
 
 public class Pessoa {
-  // 1o commit
+  String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

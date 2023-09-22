@@ -1,5 +1,5 @@
 package com.betrybe.sistemadevotacao;
 
-public class PessoaCandidata {
+public class PessoaCandidata extends Pessoa{
 
 }
