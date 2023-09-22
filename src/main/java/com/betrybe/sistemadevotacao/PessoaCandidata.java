@@ -1,41 +1,46 @@
 package com.betrybe.sistemadevotacao;
 
-public class PessoaCandidata extends Pessoa{
-    int numero;
-    int votos;
+public class PessoaCandidata extends Pessoa {
 
-    public PessoaCandidata(String nome, int numero) {
-        this.setNome(nome);
-        this.numero = numero;
-        this.votos = 0;
-    }
+  int numero;
+  int votos;
 
-    public void receberVoto(){
-        this.votos += 1;
-    }
-    public int getNumero() {
-        return numero;
-    }
+  /**
+   * Cria classe Pessoa Candidata.
+   */
+  public PessoaCandidata(String nome, int numero) {
+    this.setNome(nome);
+    this.numero = numero;
+    this.votos = 0;
+  }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
+  public void receberVoto() {
+    this.votos += 1;
+  }
 
-    public int getVotos() {
-        return votos;
-    }
+  public int getNumero() {
+    return numero;
+  }
 
-    public void setVotos(int votos) {
-        this.votos = votos;
-    }
+  public void setNumero(int numero) {
+    this.numero = numero;
+  }
 
-    @Override
-    public String getNome() {
-        return super.getNome();
-    }
+  public int getVotos() {
+    return votos;
+  }
 
-    @Override
-    public void setNome(String nome) {
-        super.setNome(nome);
-    }
+  public void setVotos(int votos) {
+    this.votos = votos;
+  }
+
+  @Override
+  public String getNome() {
+    return super.getNome();
+  }
+
+  @Override
+  public void setNome(String nome) {
+    super.setNome(nome);
+  }
 }
