@@ -33,14 +33,5 @@ public class PessoaCandidata extends Pessoa {
   public void setVotos(int votos) {
     this.votos = votos;
   }
-
-  @Override
-  public String getNome() {
-    return super.getNome();
-  }
-
-  @Override
-  public void setNome(String nome) {
-    super.setNome(nome);
-  }
+  
 }
