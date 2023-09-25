@@ -1,6 +1,7 @@
 package com.betrybe.sistemadevotacao;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
 
@@ -22,23 +23,21 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
     for (PessoaCandidata indexPessoaCandidata : pessoasCandidatas) {
       if (indexPessoaCandidata.getNumero() == numero) {
         System.out.println("Número da pessoa candidata já utilizado!");
-      } else {
-        PessoaCandidata pessoaCandidata = new PessoaCandidata(nome, numero);
-        pessoasCandidatas.add(pessoaCandidata);
       }
     }
+    PessoaCandidata pessoaCandidata = new PessoaCandidata(nome, numero);
+    pessoasCandidatas.add(pessoaCandidata);
   }
 
   @Override
   public void cadastrarPessoaEleitora(String nome, String cpf) {
     for (PessoaEleitora indexPessoaEleitora : pessoasEleitoras) {
-      if (cpf.equals(indexPessoaEleitora.getCpf())) {
+      if (Objects.equals(indexPessoaEleitora.getCpf(), cpf)) {
         System.out.println("Pessoa eleitora já cadastrada!");
-      } else {
-        PessoaEleitora pessoaEleitora = new PessoaEleitora(nome, cpf);
-        pessoasEleitoras.add(pessoaEleitora);
       }
     }
+    PessoaEleitora pessoaEleitora = new PessoaEleitora(nome, cpf);
+    pessoasEleitoras.add(pessoaEleitora);
   }
 
   @Override
