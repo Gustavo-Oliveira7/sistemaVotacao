@@ -11,6 +11,11 @@ public class GerenciamentoVotacao implements GerenciamentoVotacaoInterface {
   /**
    * Gerenciamento Votação.
    */
+  public GerenciamentoVotacao() {
+    this.pessoasCandidatas = new ArrayList<>();
+    this.cpfsComputados = new ArrayList<>();
+    this.pessoasEleitoras = new ArrayList<>();
+  }
 
   @Override
   public void cadastrarPessoaCandidata(String nome, int numero) {
